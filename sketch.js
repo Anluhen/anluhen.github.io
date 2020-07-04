@@ -1,7 +1,5 @@
-var canvas
-
 function setup(){
-  canvas = createCanvas(600,600)
+  createCanvas(600,600)
   
   var x = width/2
   var vx = 1
