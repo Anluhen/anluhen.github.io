@@ -8,8 +8,8 @@
   
   <p>Vai ter artigos aqui!</p>
   
-  <p><strong>Sobre</strong></p>
-  [a relative link](Sobre.md)
+  <p><strong>Sobre [a relative link](Sobre.md)</strong></p>
+  
 </body>
 
 </html>
