@@ -8,7 +8,7 @@
   
   <p>Vai ter artigos aqui!</p>
  
-  <p><a href="https:anluhen.github.io/Sobre.html"><strong>Sobre</strong></a></p>
+  <p><a href="/Sobre.html"><strong>Sobre</strong></a></p>
   
 </body>
 
