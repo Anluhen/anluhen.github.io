@@ -1,8 +1,8 @@
 *{
   font-family: arial;
   line-height: 1.5;
-  background-color: #AADDFF;
-}
+  background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(0,0,255,1) 0%, rgba(0,68,255,1) 41%, rgba(0,212,255,1) 100%) fixed;
+};
 
 p {
   color: #555;
@@ -10,7 +10,9 @@ p {
 
 .Title {
   border-bottom: 3px solid black;
-  font-size: 40
+  font-size: 40;
+  /* background: radial-gradient(#AADDFF, #000000);
+  background-clip: border-box; */
 }
 
 ul {
@@ -26,25 +28,25 @@ li {
 }
 
 nav {
-    border-bottom: 3px solid black;
+  border-bottom: 3px solid black;
 }
 
 .crumbs ol {
-    list-style-type: none;
-    padding-left: 5px;
+  list-style-type: none;
+  padding-left: 5px;
 }
 
 .crumb {
-    display: inline-block;
+  display: inline-block;
 }
 
 .crumb a::after {
-    display: inline-block;
-    color: #000;
-    content: '►';
-    font-size: 80%;
-    font-weight: bold;
-    padding: 0px;
+  display: inline-block;
+  color: #000;
+  content: '►';
+  font-size: 80%;
+  font-weight: bold;
+  padding: 0px;
 }
 
 article {
