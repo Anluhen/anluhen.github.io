@@ -1,6 +1,24 @@
-p {
-  color: red;
+*{
+  font-family: arial;
+  line-height: 1.5;
+  background-color: #AADDFF;
 }
+
+p {
+  color: #555;
+}
+
 .Title {
-  background-color: red
+  font-size: 40
+}
+
+ul {
+  font-size: 20;
+  display: flex;
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  padding: 5;
 }
