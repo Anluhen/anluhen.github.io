@@ -1,6 +1,9 @@
-* {
-  border: 2px solid red;
-}
+/* Referencia para o layout
+https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Introduction */
+
+/* * {
+border: 2px solid red;
+} */
 
 /* This border is for higlighting of the blocks */
 .border {
@@ -9,9 +12,10 @@
 
 html {
   font-family: arial;
-  /* font-size: 24; */
+  font-size: 18;
   line-height: 1.5;
-  background-color: black;
+  background-color: white;
+  padding-left: 15pt;
   /* background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(0,0,255,1) 0%, rgba(0,68,255,1) 41%, rgba(0,212,255,1) 100%) fixed; */
 };
 
@@ -28,6 +32,14 @@ h2 {
   display: block;
 }
 
+img {
+  height: 200px;
+}
+
+.destaque {
+  font-size: 20pt;
+}
+
 .Title {
   border-bottom: 3px solid black;
   font-size: 40;
@@ -35,12 +47,21 @@ h2 {
   background-clip: border-box; */
 }
 
-ul {
+.site_menu {
   border-bottom: 3px solid black;
   font-size: 20;
   display: flex;
   list-style: none;
   padding: 0;
+}
+
+.habilities {
+  font-size: 20;
+  display: block;
+  padding: 0px;
+  margin: 0px;
+  line-height: 0pt;
+  list-style: disc;
 }
 
 li {
@@ -69,31 +90,51 @@ nav {
   padding: 0px;
 }
 
+body {
+  margin: 0%;
+}
+
 /* Template dos artigos */
 .article {
   background-color: white;
+  display: inline-block;
 }
 
-/* Menos dos artigos */
+/* Menus dos artigos */
 .article .right-menu {
-width: 15%;
-display: inline-flex;
+  width: 15%;
 }
 
 .article .left-menu {
-width: 15%;
-display: inline-flex;
+  width: 15%;
 }
 
-/* Corpor do artigo */
+/* Corpo do artigo */
+.article .middle {
+  width: 68%;
+  border-color: #999;
+  border-top: 2px;
+  border-bottom: 2px;
+}
+
 .article .body  {
-width: 60%;
-display: inline-flex;
-  border: 3px solid blue;
+  width: 99.45%;
+  /* border: 3px solid blue; */
+  border: initial;
+  font-size: 18pt;
+  /* overflow: auto; */
 }
 
 .article .body .title {
-  display: block;
+  display: flex;
+}
+
+.article .body .subtitle {
+  display: flex;
+}
+
+.article .body .text {
+  display: flex;
 }
 
 /* Cabeçalho do artigo */
@@ -102,9 +143,4 @@ display: inline-flex;
   font-size: 48;
   color: red;
   background: white;
-}
-
-.block {
-  display: inline-block;
-  font-size: 48;
 }
