@@ -1,11 +1,31 @@
-*{
+* {
+  border: 2px solid red;
+}
+
+/* This border is for higlighting of the blocks */
+.border {
+  border: 2px solid red;
+}
+
+html {
   font-family: arial;
+  /* font-size: 24; */
   line-height: 1.5;
-  background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(0,0,255,1) 0%, rgba(0,68,255,1) 41%, rgba(0,212,255,1) 100%) fixed;
+  background-color: black;
+  /* background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(0,0,255,1) 0%, rgba(0,68,255,1) 41%, rgba(0,212,255,1) 100%) fixed; */
 };
 
 p {
   color: #555;
+  display: block;
+}
+
+h1 {
+  display: block;
+}
+
+h2 {
+  display: block;
 }
 
 .Title {
@@ -49,10 +69,42 @@ nav {
   padding: 0px;
 }
 
-article {
-  border-right: 3px solid black;
+/* Template dos artigos */
+.article {
+  background-color: white;
+}
+
+/* Menos dos artigos */
+.article .right-menu {
+width: 15%;
+display: inline-flex;
+}
+
+.article .left-menu {
+width: 15%;
+display: inline-flex;
+}
+
+/* Corpor do artigo */
+.article .body  {
+width: 60%;
+display: inline-flex;
+  border: 3px solid blue;
+}
+
+.article .body .title {
+  display: block;
+}
+
+/* Cabeçalho do artigo */
+.article .title {
+  display: block;
+  font-size: 48;
+  color: red;
+  background: white;
+}
+
+.block {
   display: inline-block;
-  padding-top: 5px;
-  padding-left: 15px;
-  padding-right: 15px;
+  font-size: 48;
 }
