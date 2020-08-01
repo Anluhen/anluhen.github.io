@@ -1,146 +1,249 @@
 /* Referencia para o layout
 https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Introduction */
 
-/* * {
-border: 2px solid red;
-} */
-
-/* This border is for higlighting of the blocks */
-.border {
-  border: 2px solid red;
-}
-
-html {
+/* NOTE: Estilo do abeçalho de todas as páginas*/
+.page {
   font-family: arial;
-  font-size: 18;
+  font-size: 15pt;
   line-height: 1.5;
   background-color: white;
-  padding-left: 15pt;
-  /* background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(0,0,255,1) 0%, rgba(0,68,255,1) 41%, rgba(0,212,255,1) 100%) fixed; */
-};
-
-p {
-  color: #555;
-  display: block;
-}
-
-h1 {
-  display: block;
-}
-
-h2 {
-  display: block;
-}
-
-img {
-  height: 200px;
-}
-
-.destaque {
-  font-size: 20pt;
-}
-
-.Title {
-  border-bottom: 3px solid black;
-  font-size: 40;
-  /* background: radial-gradient(#AADDFF, #000000);
-  background-clip: border-box; */
-}
-
-.site_menu {
-  border-bottom: 3px solid black;
-  font-size: 20;
-  display: flex;
-  list-style: none;
-  padding: 0;
-}
-
-.habilities {
-  font-size: 20;
-  display: block;
   padding: 0px;
   margin: 0px;
-  line-height: 0pt;
-  list-style: disc;
+  text-align: justify;
 }
 
-li {
+.header {
+  background-color: #CCCCCC;
+  display: flex;
+  margin: 0px;
   padding: 5px;
+  position: sticky;
+  top: 0px;
+  left: 0px;
+  border-bottom: 3px solid #888888;
+  /* height: 10%; */
 }
 
-nav {
-  border-bottom: 3px solid black;
+.header .title {
+  font-size: 40;
+  display: inline-flex;
+  /* border: 3px solid green; */
+  background-color: inherit;
+  flex: auto;
+  margin: 0px;
 }
 
-.crumbs ol {
-  list-style-type: none;
-  padding-left: 5px;
-}
-
-.crumb {
-  display: inline-block;
-}
-
-.crumb a::after {
-  display: inline-block;
-  color: #000;
-  content: '►';
-  font-size: 80%;
-  font-weight: bold;
+.header .menu {
+  font-size: 15pt;
   padding: 0px;
+  /* border: 3px solid green; */
+  display: inline-flex;
+  align-items: center;
+  margin: 0px;
 }
 
-body {
-  margin: 0%;
+.header .menu .item{
+  padding-right: 10px;
+  list-style: none;
+  /* border: 1px solid blue; */
+  align-items: center;
+  margin: 2px;
+  flex: auto;
 }
 
-/* Template dos artigos */
+/* NOTE: Página do blog */
+.blog {
+  display: flex;
+  border: 3px solid blue;
+}
+
+.blog article {
+  border: 3px solid green;
+}
+
+/* NOTE: Template dos artigos */
 .article {
-  background-color: white;
-  display: inline-block;
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  /* grid-template-rows: auto auto auto; */
+  grid-auto-rows: auto 480px auto;
 }
 
-/* Menus dos artigos */
-.article .right-menu {
-  width: 15%;
+/* Cabeçalho do atigo */
+.article .title {
+  grid-column: 1 / 4;
+  grid-row: 1;
+  padding: 12pt;
+  border-bottom: 1px solid #000;
 }
 
-.article .left-menu {
-  width: 15%;
+.article .title h2{
+  margin: 0px;
+  font-size: 36pt;
+  background-color: #CCC;
+  border: 1px solid #000;
+  border-radius: 10px;
+  padding: 12pt;
+  text-align: center;
+}
+
+/* Menu da esquerda */
+.article .lmenu {
+  grid-column: 1;
+  grid-row: 2;
+  border: 1px solid #000;
+  border-radius: 10px;
+  position: sticky;
+  top: 80px;
+  padding: 10px;
+  margin: 5px;
+  overflow-y: auto;
+}
+
+.article .lmenu h2{
+  margin: 0px;
+  text-align: center;
+  border-bottom: 1px solid black;
+}
+
+.article .lmenu ol{
+  margin: 0px;
+  list-style-position: inside;
+  padding: 6pt;
 }
 
 /* Corpo do artigo */
 .article .middle {
-  width: 68%;
-  border-color: #999;
-  border-top: 2px;
-  border-bottom: 2px;
+  grid-column: 2;
+  grid-row: 2 / 4;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 0px;
+  border-left: 1px solid #000;
+  border-right: 1px solid #000;
+  border-bottom: 1px solid #000;
+  border-radius: 10px;
 }
 
-.article .body  {
-  width: 99.45%;
-  /* border: 3px solid blue; */
-  border: initial;
-  font-size: 18pt;
-  /* overflow: auto; */
+/* Texto do artigo */
+.article .middle ol {
+  margin: 0px;
+  padding: 0pt;
 }
 
-.article .body .title {
-  display: flex;
+.article .middle li {
+  margin: 0px;
+  padding: 12pt;
+  text-decoration: underline;
+  /* border: 1px solid black; */
+  list-style-position: inside;
 }
 
-.article .body .subtitle {
-  display: flex;
+.article .middle .subtitle {
+  /* border: 1px solid black; */
+  margin: 0px;
+  padding: 0px;
+  padding-left: 0px;
 }
 
-.article .body .text {
-  display: flex;
+.article .middle .text {
+  margin: 0px;
+  padding: 12pt;
 }
 
-/* Cabeçalho do artigo */
-.article .title {
-  display: block;
-  font-size: 48;
-  color: red;
-  background: white;
+/* Menu da direita */
+.article .rmenu {
+  grid-column: 3;
+  grid-row: 2;
+  border: 1px solid #000;
+  border-radius: 10px;
+  position: sticky;
+  top: 80px;
+  padding: 10px;
+  margin: 5px;
+  overflow-y: auto;
+}
+
+.article .rmenu h2{
+  margin: 0px;
+  text-align: center;
+}
+
+/* NOTE: Estilos da página Sobre */
+.sobre {
+  margin-left: 10px;
+  padding: 5px;
+  width: 69%;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
+.sobre .title{
+  padding: 0px;
+  margin-left: 0px;
+  border-bottom: 1px solid black;
+}
+
+.sobre .info {
+  display: inline-block;
+  margin: 0px;
+  padding: 0px;
+  /* border: 3px solid black; */
+}
+
+.sobre .list {
+  display: inline-block;
+  margin: 0px;
+  padding: 0px;
+  /* border: 3px solid black; */
+  line-height: 1;
+}
+
+.sobre img {
+  height: 200px;
+}
+
+.sobre .bio h3{
+  border-top: 1px solid black;
+}
+
+/* NOTE: Estilo padrão de elementos */
+p{
+  /* border: 3px solid red; */
+  text-align: justify;
+}
+
+footer p{
+  text-align: center;
+}
+
+/* Estilos dos links do site */
+a {
+  color: inherit;
+}
+
+a:link {
+  text-decoration: none;
+  font-weight: bolder;
+}
+
+a:visited {
+  font
+}
+
+a:focus {
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:active {
+  background-color: #696969;
+}
+
+.header a {
+  text-decoration: none;
+  font-weight: unset;
+  font-style: normal;
 }
