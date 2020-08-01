@@ -1,51 +1,15 @@
 /* Referencia para o layout
 https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Introduction */
 
-/* Estilos dos links do site */
-a {
-  color: inherit;
-}
-
-a:link {
-  text-decoration: none;
-  font-weight: bolder;
-}
-
-a:visited {
-  font
-}
-
-a:focus {
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-a:active {
-  background-color: #696969;
-}
-
-.header .title_a {
-  text-decoration: none;
-  font-weight: unset;
-  font-style: normal;
-}
-
-/* Estilo padrão dos paragrafos */
-p{
-  border: 3px solid red;
-  text-align: justify;
-}
-
-/*Estilo do abeçalho de todas as páginas*/
+/* NOTE: Estilo do abeçalho de todas as páginas*/
 .page {
   font-family: arial;
-  font-size: 18;
+  font-size: 15pt;
   line-height: 1.5;
   background-color: white;
   padding: 0px;
   margin: 0px;
+  text-align: justify;
 }
 
 .header {
@@ -57,6 +21,7 @@ p{
   top: 0px;
   left: 0px;
   border-bottom: 3px solid #888888;
+  /* height: 10%; */
 }
 
 .header .title {
@@ -86,68 +51,199 @@ p{
   flex: auto;
 }
 
-/* Template dos artigos */
+/* NOTE: Página do blog */
+.blog {
+  display: flex;
+  border: 3px solid blue;
+}
+
+.blog article {
+  border: 3px solid green;
+}
+
+/* NOTE: Template dos artigos */
 .article {
   display: grid;
   grid-template-columns: 1fr 3fr 1fr;
-  grid-gap: 5px;
+  /* grid-template-rows: auto auto auto; */
+  grid-auto-rows: auto 480px auto;
 }
 
-.title {
+/* Cabeçalho do atigo */
+.article .title {
   grid-column: 1 / 4;
   grid-row: 1;
-  border: 2px solid #CCC;
-  border-radius: 10px;
-  text-align: center;
-  margin: 24pt;
-  background-color: #CCC;
-  font-size: 24pt;
+  padding: 12pt;
+  border-bottom: 1px solid #000;
 }
 
-/* Menus dos artigos */
+.article .title h2{
+  margin: 0px;
+  font-size: 36pt;
+  background-color: #CCC;
+  border: 1px solid #000;
+  border-radius: 10px;
+  padding: 12pt;
+  text-align: center;
+}
 
+/* Menu da esquerda */
 .article .lmenu {
   grid-column: 1;
   grid-row: 2;
-  border: 2px solid #CCC;
+  border: 1px solid #000;
   border-radius: 10px;
-  background-color: #CCC;
   position: sticky;
-  top: 88px;
+  top: 80px;
+  padding: 10px;
+  margin: 5px;
+  overflow-y: auto;
 }
 
-.article .lmenu .title{
-  all: unset;
-  font-size: 18pt;
-  font-weight: bold;
+.article .lmenu h2{
+  margin: 0px;
+  text-align: center;
+  border-bottom: 1px solid black;
+}
+
+.article .lmenu ol{
+  margin: 0px;
+  list-style-position: inside;
+  padding: 6pt;
 }
 
 /* Corpo do artigo */
 .article .middle {
   grid-column: 2;
   grid-row: 2 / 4;
-}
-
-/* Cabeçalho do artigo */
-.article .middle .title {
-
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 0px;
+  border-left: 1px solid #000;
+  border-right: 1px solid #000;
+  border-bottom: 1px solid #000;
+  border-radius: 10px;
 }
 
 /* Texto do artigo */
-.article .middle .subtitle {
+.article .middle ol {
+  margin: 0px;
+  padding: 0pt;
+}
 
+.article .middle li {
+  margin: 0px;
+  padding: 12pt;
+  text-decoration: underline;
+  /* border: 1px solid black; */
+  list-style-position: inside;
+}
+
+.article .middle .subtitle {
+  /* border: 1px solid black; */
+  margin: 0px;
+  padding: 0px;
+  padding-left: 0px;
 }
 
 .article .middle .text {
-
+  margin: 0px;
+  padding: 12pt;
 }
 
+/* Menu da direita */
 .article .rmenu {
   grid-column: 3;
   grid-row: 2;
-  border: 2px solid #CCC;
+  border: 1px solid #000;
   border-radius: 10px;
-  background-color: #CCC;
   position: sticky;
-  top: 88px;
+  top: 80px;
+  padding: 10px;
+  margin: 5px;
+  overflow-y: auto;
+}
+
+.article .rmenu h2{
+  margin: 0px;
+  text-align: center;
+}
+
+/* NOTE: Estilos da página Sobre */
+.sobre {
+  margin-left: 10px;
+  padding: 5px;
+  width: 69%;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
+.sobre .title{
+  padding: 0px;
+  margin-left: 0px;
+  border-bottom: 1px solid black;
+}
+
+.sobre .info {
+  display: inline-block;
+  margin: 0px;
+  padding: 0px;
+  /* border: 3px solid black; */
+}
+
+.sobre .list {
+  display: inline-block;
+  margin: 0px;
+  padding: 0px;
+  /* border: 3px solid black; */
+  line-height: 1;
+}
+
+.sobre img {
+  height: 200px;
+}
+
+.sobre .bio h3{
+  border-top: 1px solid black;
+}
+
+/* NOTE: Estilo padrão de elementos */
+p{
+  /* border: 3px solid red; */
+  text-align: justify;
+}
+
+footer p{
+  text-align: center;
+}
+
+/* Estilos dos links do site */
+a {
+  color: inherit;
+}
+
+a:link {
+  text-decoration: none;
+  font-weight: bolder;
+}
+
+a:visited {
+  font
+}
+
+a:focus {
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:active {
+  background-color: #696969;
+}
+
+.header a {
+  text-decoration: none;
+  font-weight: unset;
+  font-style: normal;
 }
