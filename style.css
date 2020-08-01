@@ -1,18 +1,18 @@
 /* Referencia para o layout
 https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Introduction */
 
-/* * {
-border: 2px solid red;
-} */
+/* Estilos dos links do site */
 a {
   color: inherit;
 }
 
 a:link {
   text-decoration: none;
+  font-weight: bolder;
 }
 
 a:visited {
+  font
 }
 
 a:focus {
@@ -26,44 +26,43 @@ a:active {
   background-color: #696969;
 }
 
+.header .title_a {
+  text-decoration: none;
+  font-weight: unset;
+  font-style: normal;
+}
+
+/* Estilo padrão dos paragrafos */
 p{
   border: 3px solid red;
-}
-/* This border is for higlighting of the blocks */
-.border {
-  border: 2px solid red;
+  text-align: justify;
 }
 
-.divider {
-  border: none;
-  border-top: 3px solid #333;
-  color: #333;
-  overflow: visible;
-  text-align: center;
-  height: 5px;
-}
-
-/*Standard pages style*/
+/*Estilo do abeçalho de todas as páginas*/
 .page {
   font-family: arial;
   font-size: 18;
   line-height: 1.5;
   background-color: white;
   padding: 0px;
+  margin: 0px;
 }
 
 .header {
-  /* border: 3px solid blue; */
   background-color: #CCCCCC;
   display: flex;
   margin: 0px;
-  padding: 0px;
+  padding: 5px;
+  position: sticky;
+  top: 0px;
+  left: 0px;
+  border-bottom: 3px solid #888888;
 }
 
 .header .title {
   font-size: 40;
   display: inline-flex;
-  border: 3px solid green;
+  /* border: 3px solid green; */
   background-color: inherit;
   flex: auto;
   margin: 0px;
@@ -72,16 +71,16 @@ p{
 .header .menu {
   font-size: 15pt;
   padding: 0px;
-  border: 3px solid green;
+  /* border: 3px solid green; */
   display: inline-flex;
   align-items: center;
   margin: 0px;
 }
 
-.header .menu .button{
+.header .menu .item{
   padding-right: 10px;
   list-style: none;
-  border: 1px solid blue;
+  /* border: 1px solid blue; */
   align-items: center;
   margin: 2px;
   flex: auto;
@@ -89,52 +88,66 @@ p{
 
 /* Template dos artigos */
 .article {
-  display: inline-block;
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  grid-gap: 5px;
 }
 
-.article .header {
-  border: 2px solid blue;
+.title {
+  grid-column: 1 / 4;
+  grid-row: 1;
+  border: 2px solid #CCC;
+  border-radius: 10px;
+  text-align: center;
+  margin: 24pt;
+  background-color: #CCC;
+  font-size: 24pt;
 }
 
 /* Menus dos artigos */
-.article .rmenu {
-  width: 15%;
-  display: inline-flex;
-}
 
 .article .lmenu {
-  width: 15%;
-  display: inline-flex;
+  grid-column: 1;
+  grid-row: 2;
+  border: 2px solid #CCC;
+  border-radius: 10px;
+  background-color: #CCC;
+  position: sticky;
+  top: 88px;
 }
 
 .article .lmenu .title{
-  display: block;
-  border-color: blue;
-  font-size: 6pt;
+  all: unset;
+  font-size: 18pt;
+  font-weight: bold;
 }
 
 /* Corpo do artigo */
 .article .middle {
-  width: 68%;
-  /* border-color: #999;
-  border-top: 2px;
-  border-bottom: 2px; */
-  /* border: 3px solid blue; */
-  font-size: 18pt;
-  display: block;
+  grid-column: 2;
+  grid-row: 2 / 4;
 }
 
 /* Cabeçalho do artigo */
 .article .middle .title {
-  display: block;
+
 }
 
 /* Texto do artigo */
 .article .middle .subtitle {
-  display: block;
-  font-size: 6pt;
+
 }
 
 .article .middle .text {
-  display: block;
+
+}
+
+.article .rmenu {
+  grid-column: 3;
+  grid-row: 2;
+  border: 2px solid #CCC;
+  border-radius: 10px;
+  background-color: #CCC;
+  position: sticky;
+  top: 88px;
 }
